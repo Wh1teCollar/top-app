@@ -1,12 +1,12 @@
 .reviewForm {
+	display: grid;
+	align-items: center;
+
 	font-size: 14px;
 	line-height: 24px;
-
-	display: grid;
 	grid-template-columns: [start] auto 1fr auto [end];
 
 	gap: 20px 30px;
-	align-items: center;
 }
 
 .description {
@@ -32,11 +32,13 @@
 }
 
 .success {
-	background-color: var(--green-light);
-	padding: 20px;
 	position: relative;
-	border-radius: 5px;
+
 	margin-top: 20px;
+	padding: 20px;
+
+	border-radius: 5px;
+	background-color: var(--green-light);
 }
 
 .successTitle {
@@ -47,10 +49,11 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
+
 	cursor: pointer;
 }
 
-@media screen and (max-width:1120px) {
+@media screen and (max-width: 1120px) {
 	.reviewForm {
 		grid-template-columns: [start] 1fr 1fr [end];
 	}
@@ -64,7 +67,7 @@
 	}
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
 	.reviewForm {
 		grid-template-columns: [start] 1fr [end];
 	}

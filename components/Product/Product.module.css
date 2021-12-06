@@ -1,6 +1,7 @@
 .product {
 	display: grid;
 	grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto [end];
+
 	margin-bottom: 30px;
 	padding: 30px;
 }
@@ -22,6 +23,7 @@
 .price,
 .priceTitle {
 	grid-column: pricestart / priceend;
+
 	white-space: nowrap;
 }
 
@@ -33,6 +35,7 @@
 .rating,
 .rateTitle {
 	grid-column: ratestart / end;
+
 	white-space: nowrap;
 }
 
@@ -56,10 +59,11 @@
 }
 
 .title {
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 27px;
 	align-self: flex-end;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
 }
 
 .month {
@@ -69,9 +73,10 @@
 
 .price,
 .credit {
+	align-self: flex-end;
+
 	font-size: 20px;
 	line-height: 27px;
-	align-self: flex-end;
 }
 
 .rating {
@@ -82,8 +87,9 @@
 .creditTitle,
 .rateTitle {
 	text-align: left;
-	font-weight: 300;
+
 	font-size: 14px;
+	font-weight: 300;
 	line-height: 19px;
 }
 
@@ -95,9 +101,10 @@
 }
 
 .description {
+	margin-bottom: 15px;
+
 	font-size: 16px;
 	line-height: 24px;
-	margin-bottom: 15px;
 }
 
 .reviewButton {
@@ -106,22 +113,25 @@
 
 .advantagesTitle,
 .disadvantagesTitle {
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 22px;
 	margin-bottom: 5px;
+
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 22px;
 }
 
 .advantages {
-	border-left: 2px solid var(--green);
-	padding-left: 15px;
 	margin-bottom: 20px;
+	padding-left: 15px;
+
+	border-left: 2px solid var(--green);
 }
 
 .disadvantages {
-	border-left: 2px solid var(--red);
-	padding-left: 15px;
 	margin-bottom: 20px;
+	padding-left: 15px;
+
+	border-left: 2px solid var(--red);
 }
 
 .advantagesList,
@@ -134,7 +144,9 @@
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	gap: 10px;
+
 	padding-right: 60px;
+
 	font-size: 16px;
 	line-height: 32px;
 }
@@ -144,8 +156,9 @@
 }
 
 .characteristicsDots {
-	border-bottom: 1px dashed var(--grey-light);
 	margin-bottom: 10px;
+
+	border-bottom: 1px dashed var(--grey-light);
 }
 
 .reviews {
@@ -154,15 +167,16 @@
 
 .closed {
 	overflow: hidden;
+
 	max-height: 0;
-	padding: 0;
 	margin-bottom: 30px;
+	padding: 0;
 }
 
 .opened {
 	max-height: auto;
-	padding: 30px;
 	margin-bottom: 30px;
+	padding: 30px;
 }
 
 .hrOpened {
@@ -175,6 +189,7 @@
 
 .seoTextClosed {
 	overflow: hidden;
+
 	max-height: 0;
 	padding: 0;
 }
@@ -186,8 +201,7 @@
 @media screen and (max-width: 1320px) {
 	.product {
 		display: grid;
-		grid-template-columns:
-			70px 30px auto 40px auto 40px 1fr;
+		grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
 		grid-template-areas:
 			"logo . title title title title title"
 			"logo . tag tag tag tag tag"
@@ -200,12 +214,12 @@
 			"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
 			"seoText seoText seoText seoText seoText seoText seoText"
 			"hr3 hr3 hr3 hr3 hr3 hr3 hr3"
-			"actions actions actions actions actions actions actions"
-		;
+			"actions actions actions actions actions actions actions";
 	}
 
 	.logo {
 		grid-area: logo;
+
 		margin-bottom: 20px;
 	}
 
@@ -215,6 +229,7 @@
 
 	.tag {
 		grid-area: tag;
+
 		margin-bottom: 20px;
 	}
 
@@ -278,8 +293,7 @@
 @media screen and (max-width: 640px) {
 	.product {
 		display: grid;
-		grid-template-columns:
-			70px 30px 1fr;
+		grid-template-columns: 70px 30px 1fr;
 		grid-template-areas:
 			"logo . title"
 			"logo . tag"
@@ -293,8 +307,7 @@
 			"hr2 hr2 hr2"
 			"seoText seoText seoText"
 			"hr3 hr3 hr3"
-			"actions actions actions"
-		;
+			"actions actions actions";
 	}
 
 	.price,
@@ -325,8 +338,7 @@
 			"hr2"
 			"seoText"
 			"hr3"
-			"actions"
-		;
+			"actions";
 	}
 
 	.price,
